@@ -10,9 +10,14 @@ public abstract class Room {
     public Room(int capacity, ArrayList<Guest> guests, double length, double width) {
         this.capacity = capacity;
         this.guests = guests;
+        this.length = length;
+        this.width = width;
     }
 
 
+    public static double calcSize( Double width, Double length){
+        return length * width;
+    }
 
     public int getCapacity() {
         return capacity;

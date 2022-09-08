@@ -21,6 +21,16 @@ public class Hotel {
         return diningRoom.getName();
     }
 
+    public ArrayList<Bedroom> avaRooms(){
+       ArrayList<Bedroom> vacant = new ArrayList<Bedroom>();
+        for (Bedroom room : bedrooms) {
+            if(room.guests.size() == 0){
+                vacant.add(room);
+            }
+        }
+        return vacant;
+    }
+
     public Booking addGuestRoom(Guest guest, int nights) {
         for (Bedroom room : bedrooms) {
             if (room.guests.size() == 0) {
