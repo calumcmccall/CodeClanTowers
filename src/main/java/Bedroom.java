@@ -9,6 +9,9 @@ public class Bedroom extends Room {
         super(roomType.getCapacity(), guests);
         this.roomNumber = roomNumber;
         this.roomType = roomType;
+        this.roomRate = roomRate;
     }
-
+    public double getRoomRate() {
+        return roomRate;
+    }
 }
