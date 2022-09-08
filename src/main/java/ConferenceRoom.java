@@ -7,8 +7,8 @@ public class ConferenceRoom extends Room {
     private String name;
 
 
-    public ConferenceRoom(int capacity, ArrayList<Guest> guests, String name) {
-        super(capacity, guests);
+    public ConferenceRoom(int capacity, ArrayList<Guest> guests, String name, double length, double width) {
+        super(capacity, guests, length, width);
         this.name = name;
     }
 

@@ -4,8 +4,8 @@ public class DiningRoom extends Room {
 
     private String name;
 
-    public DiningRoom(int capacity, ArrayList<Guest> guests, String name) {
-        super(capacity, guests);
+    public DiningRoom(int capacity, ArrayList<Guest> guests, String name, double length, double width) {
+        super(capacity, guests, length, width);
         this.name = name;
     }
 
