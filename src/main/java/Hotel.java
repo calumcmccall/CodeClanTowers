@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Hotel {
-
+    Booking booking;
     private String name;
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
@@ -25,17 +25,21 @@ public class Hotel {
         for (Bedroom room : bedrooms) {
             if (room.guests.size() == 0) {
                 room.guests.add(guest);
+                return bookRoom(room, nights);
             }
         }
+        return null;
     }
 
-    public void addGuestRoom(Guest guest, Guest guest2) {
+    public Booking addGuestRoom(Guest guest, Guest guest2, int nights) {
         for (Bedroom room : bedrooms) {
-            if (room.guests.size() == 0 && room.capacity == 2) {
+            if (room.guests.size() == 0 && room.capacity == 2){
                 room.guests.add(guest);
                 room.guests.add(guest2);
+                return bookRoom(room, nights);
             }
         }
+        return null;
     }
 
     public void checkOut(Guest guest) {
@@ -44,5 +48,9 @@ public class Hotel {
                 room.guests.clear();
             }
         }
+    }
+
+    public Booking bookRoom(Bedroom bedroom, int nights){
+      return booking = new Booking(bedroom, nights);
     }
 }
