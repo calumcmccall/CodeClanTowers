@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public abstract class Room {
 
     protected int capacity;
-    private double legnth;
+    private double length;
     private double width;
     ArrayList<Guest> guests;
 
-    public Room(int capacity, ArrayList<Guest> guests, double legnth, double width) {
+    public Room(int capacity, ArrayList<Guest> guests, double length, double width) {
         this.capacity = capacity;
         this.guests = guests;
     }
